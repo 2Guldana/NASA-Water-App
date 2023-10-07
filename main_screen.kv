@@ -1,0 +1,59 @@
+MDScreenManager:
+  MainScreen
+
+<MainScreen>:
+  name:'main_screen'
+  button1: button1
+  MDBoxLayout:
+    orientation: 'horizontal'
+    MDBottomNavigation:
+      panel_color: '#486F84'
+      text_color_active: 0, 0, 0, 1 
+
+      MDBottomNavigationItem:
+        name: 'home'
+        text: 'Home'
+        icon: 'home'
+        MDCard:
+          radius: 0 
+          size_hint: 1, 1
+          md_bg_color: '#588DAF'
+
+      MDBottomNavigationItem:
+        name: 'search'
+        text: 'Search'
+        icon: 'magnify'
+        MDCard:
+          radius: 0 
+          size_hint: 1, 1
+          md_bg_color: '#588DAF'
+          MDFloatLayout:
+            MDRoundFlatIconButton:
+              id: button1
+              text:'Choose location:             '
+              font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+              text_color: '#34495E'
+              font_size: '30sp'
+              md_bg_color: '#B1BCF5'
+              size_hint: 0, 0
+              pos_hint: {'center_x':.5, 'center_y':.93}
+              icon_color:'#34495E'
+              line_color:'34495E'
+              icon: 'magnify'
+
+
+          
+      MDBottomNavigationItem:
+        name: 'faq'
+        text: 'FAQ'
+        icon: 'help-circle-outline'
+        icon_size: '40sp'
+        MDCard:
+          radius: 0 
+          size_hint: 1, 1
+          md_bg_color: '#588DAF'
+
+
+
+          
+

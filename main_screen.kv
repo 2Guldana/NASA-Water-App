@@ -1,3 +1,4 @@
+#:import MapSource kivy_garden.mapview.MapSource
 MDScreenManager:
   MainScreen
 
@@ -9,7 +10,6 @@ MDScreenManager:
     MDBottomNavigation:
       panel_color: '#486F84'
       text_color_active: 0, 0, 0, 1 
-
       MDBottomNavigationItem:
         name: 'home'
         text: 'Home'
@@ -18,6 +18,121 @@ MDScreenManager:
           radius: 0 
           size_hint: 1, 1
           md_bg_color: '#588DAF'
+          MDFloatLayout:
+            MDBoxLayout:
+              pos_hint: {'center_x':.6, 'center_y':.97}
+              orientation: 'horizontal'
+              cols:2
+              MDLabel:
+                font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                text: 'Your city:'
+                font_size: '50sp'
+                color: '#34495E'
+              MDLabel:
+                text: 'Oskemen'
+                font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
+                font_size: '50sp'
+                color: '#FFFFFF'
+            MDFloatLayout:
+            MDCard:
+              md_bg_color: '#B1BCF5'
+              size_hint: .53, .4
+              pos_hint: {'center_x':.28, 'center_y':.73}
+              radius: 30
+
+              MDBoxLayout:
+                spacing: '-10' 
+                orientation:'vertical'
+                rows: 5
+                MDLabel:
+                  text: 'Nearby water bodies:'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '40sp'
+                  halign: 'left'
+                  color: '#FFFFFF'
+                  line_height: .4
+                  pos_hint: {'center_x':.56}
+                MDTextButton: 
+                  text: '•Irtysh(5km)'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '35sp'
+                  halign: 'left'
+                  theme_text_color: "Custom"
+                  text_color: '#C8F9FC'
+                  font_kerning: 'True'
+                MDTextButton:
+                  text: '•Bukhtarma(120km)'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '32sp'
+                  halign: 'left'
+                  theme_text_color: "Custom"
+                  text_color: '#C8F9FC'
+                  font_kerning: 'True'
+                MDTextButton:
+                  text:'•Sibin lake(120km)'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '35sp'
+                  halign: 'left'
+                  theme_text_color: "Custom"
+                  text_color: '#C8F9FC'
+                MDTextButton:
+                  line_color: '00000000'
+                  pos_hint: {'center_y':.5, 'center_x':.31}
+                  text:'See all...'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '40sp'
+                  halign: 'left'
+                  theme_text_color: "Custom"
+                  text_color: '#C8F9FC'
+            MDBoxLayout:
+              orientation: 'vertical'
+              MDFloatLayout:
+                MDLabel:
+                  text:'Chosen object:'
+                  font_size: '38sp'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  pos_hint: {'center_x':1.05, 'center_y':.65}
+                  color: '#34495E'
+              MDFloatLayout:
+                MDRectangleFlatButton:
+                  icon_color: '#B1BCF5'
+                  line_color:'#B1BCF5'
+                  text_color:'#34495E'
+                  text:'Irtysh'
+                  size_hint: .4, 0
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size:'32sp'
+                  pos_hint: {'center_x':.78, 'center_y':1.40}
+              MDFloatLayout:
+                MDFillRoundFlatIconButton:
+                  text:'Explore it!'                  
+                  md_bg_color:'#B1BCF5'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '26sp'
+                  pos_hint: {'center_x':.78, 'center_y':2}
+
+            MDBoxLayout:
+              orientation: 'vertical'
+              MDFloatLayout:
+                MapView:
+                  zoom: 10
+                  lat: 49.97490235393528
+                  lon: 82.60752931209392
+                  size_hint: .75, .4
+                  pos_hint: {'center_x':.5, 'center_y':.3}
+                  MapMarker:
+                    lat: 49.936734265179034
+                    lon: 82.61375422479476
+            MDBoxLayout:
+              orientation:'horizontal'
+              MDFloatLayout:
+                MDFillRoundFlatIconButton:
+                  pos_hint:{'center_x':.5, 'center_y':.05}
+                  text:'Where I am? '                  
+                  md_bg_color:'#B1BCF5'
+                  font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                  font_size: '26sp'
+
 
       MDBottomNavigationItem:
         name: 'search'
@@ -40,9 +155,8 @@ MDScreenManager:
               icon_color:'#34495E'
               line_color:'34495E'
               icon: 'magnify'
-
-
-          
+              on_press:root.open_menu()
+                            
       MDBottomNavigationItem:
         name: 'faq'
         text: 'FAQ'
@@ -52,8 +166,6 @@ MDScreenManager:
           radius: 0 
           size_hint: 1, 1
           md_bg_color: '#588DAF'
-
-
 
           
 

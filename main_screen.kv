@@ -30,61 +30,62 @@
             pos_hint:{'center_y':.95, 'center_x':0.05}
             on_release:
               root.manager.transition.direction ='right'
-              root.manager.current = 'en'
+              root.manager.current = 'kz'
           MDLabel:
-            text: 'site distance:\n200 km'
-            pos_hint:{'center_y':.93, 'center_x':1.2}
+            text: 'site distance:200 km'
+            pos_hint:{'center_y':.91, 'center_x':.18}
             font_name:'/usr/share/fonts/TTF/Dongle-Bold.ttf'
             font_size:'25sp'
             color:'#FFFFFF'
+            halign:'right'
           MDLabel:
             text:'Type: Lake'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.85}
+            pos_hint: {'center_y':.85, 'center_x':.55}
           MDLabel:
             text:'Water quality: Good, Swimming available'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.79}
-            line_height: .5
+            pos_hint: {'center_y':.79, 'center_x':.55}
+            line_height: .4
           MDLabel:
             text:'Area: 25km^2 '
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.73}
+            pos_hint: {'center_y':.74, 'center_x':.55}            
           MDLabel:
             text:'Depth: 30m'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.68}
+            pos_hint: {'center_y':.70, 'center_x':.55}
           MDLabel:
-            text:'East Kazakhstan Region'
+            text:'Region:East Kazakhstan Region'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.62}
+            pos_hint: {'center_y':.66, 'center_x':.55}
           MDLabel:
             text:'Animals on the verge of extinction: Grus leucogeranus, Haliaeetus leucoryphus'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.54}
+            pos_hint: {'center_y':.58, 'center_x':.55}
             line_height: .5
           MDLabel:
             text:'Measures to prevent extinction: Habitat conservation, water Monitoring'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.45}
+            pos_hint: {'center_y':.45, 'center_x':.55}
             line_height: .5
           Image:
-            source: '1.jpg'
-            size_hint: .6, .6
+            source: '2.jpg'
+            size_hint: .9, 1
             pos_hint: {'center_x':.5, 'center_y':.2}
 
 <Huron>:
@@ -98,7 +99,7 @@
         MDFloatLayout:
           MDLabel:
             text: 'Lake Huron'
-            pos_hint:{'center_y':.95, 'center_x':.65}
+            pos_hint:{'center_y':.95, 'center_x':.7}
             font_name:'/usr/share/fonts/TTF/Dongle-Bold.ttf'
             font_size:'55sp'
             color:'#FFFFFF'
@@ -112,55 +113,56 @@
               root.manager.transition.direction ='right'
               root.manager.current = 'en'
           MDLabel:
-            text: 'site distance:\nX km'
-            pos_hint:{'center_y':.93, 'center_x':1.2}
+            text: 'site distance:9345 km'
+            pos_hint:{'center_y':.9, 'center_x':.7}
             font_name:'/usr/share/fonts/TTF/Dongle-Bold.ttf'
             font_size:'25sp'
             color:'#FFFFFF'
+
           MDLabel:
             text:'Type: Freshwater Lake'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.85}
+            pos_hint: {'center_y':.85, 'center_x':.55}
           MDLabel:
             text:'Water quality: Good, Swimming available'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.79}
+            pos_hint: {'center_y':.79, 'center_x':.55}
             line_height: .5
           MDLabel:
             text:'Area: 59600m^2 '
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.73}
+            pos_hint: {'center_y':.73, 'center_x':.55}
           MDLabel:
             text:'Depth: 229m'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.68}
+            pos_hint: {'center_y':.68, 'center_x':.55}
           MDLabel:
             text:'Region: Great Lakes Region '
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.62}
+            pos_hint: {'center_y':.62, 'center_x':.55}
           MDLabel:
-            text:'Rare animals: Lake Sturgeon, Piping Plover '
+            text:'Rare animals: Lake Sturgeon, \nPiping Plover '
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.54}
+            pos_hint: {'center_y':.54, 'center_x':.55}
             line_height: .5
           MDLabel:
-            text:'Measures to prevent extinction: Habitat conservation, Monitoring and research'
+            text:'Measures to prevent extinction: Habitat conservation, \nMonitoring and research'
             font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
             color: '#00253A'
             font_size: '33sp'
-            pos_hint: {'center_y':.45}
+            pos_hint: {'center_y':.45, 'center_x':.55 }
             line_height: .5
           Image:
             source: '1.jpg'
@@ -208,6 +210,9 @@
           icon_size:'48sp'
           icon_color:'#34495E'
           pos_hint: {'center_y':.94, 'center_x':.2}
+          on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'main_screen'
       MDFloatLayout:
         Label:
           text:"Kazakhstan's water boddies"
@@ -222,7 +227,7 @@
           font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
           font_size:'50sp'
           pos_hint:{'center_x':-1, 'center_y':.7}
-          color:'#C8F9FC'
+          color:'#F5B7B1'
           on_release:
             root.manager.current = 'markakol'
         MDTextButton:
@@ -268,13 +273,13 @@
           pos_hint:{'center_x':.57, 'center_y':.88}
           color:'#34495E'
       MDFloatLayout:
-        MDBoxLayout:
+        MDFloatLayout:
         MDTextButton:
           text:'•Huron lake'
           font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
           font_size:'50sp'
-          pos_hint:{'center_x':-1, 'center_y':.7}
-          color:'#C8F9FC'
+          pos_hint:{'center_x':-1.2, 'center_y':.7}
+          color:'#F5B7B1'
           on_release:
             root.manager.current = 'huron'
         MDTextButton:
@@ -295,8 +300,86 @@
           font_size:'50sp'
           pos_hint:{'center_x':-.9, 'center_y':.1}
           color:'#C8F9FC'
-
-
+<Irtysh>:
+  name:'irtysh'
+  MDFloatLayout:
+    MDCard:
+      md_bg_color:'#588DAF'
+      size_hint: 1, 1
+      radius: 0
+      MDBoxLayout:
+        MDFloatLayout:
+          MDLabel:
+            text: 'The Irtysh river'
+            pos_hint:{'center_y':.95, 'center_x':.7}
+            font_name:'/usr/share/fonts/TTF/Dongle-Bold.ttf'
+            font_size:'55sp'
+            color:'#FFFFFF'
+          MDIconButton:
+            icon:'arrow-left'
+            icon_size:'35sp'
+            theme_icon_color: 'Custom'
+            icon_color:'#486F84'
+            pos_hint:{'center_y':.95, 'center_x':0.05}
+            on_release:
+              root.manager.transition.direction ='right'
+              root.manager.current = 'main_screen'
+          MDLabel:
+            text: 'site distance:2 km'
+            pos_hint:{'center_y':.9, 'center_x':.7}
+            font_name:'/usr/share/fonts/TTF/Dongle-Bold.ttf'
+            font_size:'25sp'
+            color:'#FFFFFF'
+          MDLabel:
+            text:'Type: River'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.85, 'center_x':.55}
+          MDLabel:
+            text:'Water quality: Poor, Swimming unavailable'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.79, 'center_x':.55}
+            line_height: .5
+          MDLabel:
+            text:'Area: 164300 km^2 '
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.73, 'center_x':.55}
+          MDLabel:
+            text:'Depth: 6-15m'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.68, 'center_x':.55}
+          MDLabel:
+            text:'Region: Eath Kazakhstan Region'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.62, 'center_x':.55}
+          MDLabel:
+            text:'Rare animals: None'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.54, 'center_x':.55}
+            line_height: .5
+          MDLabel:
+            text:'Measures to prevent water\npollution: water monitoring, reduce manifacturing'
+            font_name:'/usr/share/fonts/TTF/Dongle-Regular.ttf'
+            color: '#00253A'
+            font_size: '33sp'
+            pos_hint: {'center_y':.45, 'center_x':.55 }
+            line_height: .5
+          Image:
+            source: '3.jpg'
+            size_hint: .8, .8
+            pos_hint: {'center_x':.5, 'center_y':.2}
+  
 <MainScreen>:
   name:'main_screen'
   button1: button1
@@ -334,7 +417,6 @@
               size_hint: .53, .4
               pos_hint: {'center_x':.28, 'center_y':.73}
               radius: 30
-
               MDBoxLayout:
                 spacing: '-10' 
                 orientation:'vertical'
@@ -373,7 +455,7 @@
                 MDTextButton:
                   line_color: '00000000'
                   pos_hint: {'center_y':.5, 'center_x':.31}
-                  text:'See all...'
+                  text:'See all'
                   font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
                   font_size: '40sp'
                   halign: 'left'
@@ -405,6 +487,7 @@
                   font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
                   font_size: '26sp'
                   pos_hint: {'center_x':.78, 'center_y':2}
+                  on_release:root.manager.current = 'irtysh'
 
             MDBoxLayout:
               orientation: 'vertical'
@@ -451,7 +534,36 @@
               line_color:'34495E'
               icon: 'magnify'
               on_press:root.open_menu()
-                            
+      MDBottomNavigationItem:
+        name: 'tip'
+        text: 'Tip'
+        icon: 'lightbulb' 
+        MDCard:
+          radius: 0 
+          size_hint: 1, 1 
+          md_bg_color: '#588DAF'
+          MDBoxLayout:
+            MDFloatLayout:
+              MDLabel:
+                text: 'Daily tip'
+                color: '#FFFFFF'
+                font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
+                font_size: '60sp'
+                pos_hint: {'center_x':.55, 'center_y':.95}
+              MDLabel:
+                text:'Watching marine\nmammals'
+                pos_hint: {'center_x':.55, 'center_y':.85}
+                font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
+                color: '#00253A'
+                font_size: '40sp'
+                line_height:.5
+              MDLabel:
+                text:"Canada's Department of Fisheries and\nOceans advices you,\nnever feed marine mammals,\nswim, dive or interact with them, \nmove, encircle them or entice\nthem to move!"
+                font_name: '/usr/share/fonts/TTF/Dongle-Bold.ttf'
+                font_size: '30sp'
+                color: '#00253A'
+                line_height: .8
+                pos_hint: {'center_x':.55, 'center_y':.6}
       MDBottomNavigationItem:
         name: 'faq'
         text: 'FAQ'
@@ -461,6 +573,39 @@
           radius: 0 
           size_hint: 1, 1
           md_bg_color: '#588DAF'
+          MDBoxLayout:
+            MDFloatLayout:
+              MDLabel:
+                text:'Q1: What species are threatened in water bodies?'
+                font_size: '30sp'
+                font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                color: '#00253A'
+                pos_hint: {'center_y':.95, 'center_x':.56}
+                line_height:.5
+              MDLabel:
+                text:'A1: Water bodies around the world \nface various threats, and the species\nat risk are diverse. Our data is continuously updated, and you can\nfind information about specific threatened species in the\n"Endangered Species" section of our app.'
+                font_size: '30sp'
+                font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                line_height:.5
+                color: '#00253A'
+                pos_hint: {'center_y':.75, 'center_x':.56}
+                valign:'center'
+              MDLabel:
+                text:'Q2: How can I help conserve these species?'
+                font_size: '30sp'
+                font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                color: '#00253A'
+                pos_hint: {'center_y':.45, 'center_x':.56}
+                line_height:.5
+              MDLabel:
+                text:'A2: There are numerous ways to help. You can start by minimizing the use of single-use plastics, reducing harmful pollutants entering the water, and supporting conservation organizations. In the "How to Help" section of the app, we provide detailed information and tips.'
+                font_size: '30sp'
+                font_name: '/usr/share/fonts/TTF/Dongle-Regular.ttf'
+                line_height:.5
+                color: '#00253A'
+                pos_hint: {'center_y':.25, 'center_x':.56}
+                valign:'center'
 
-          
+
+
 

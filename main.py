@@ -24,7 +24,8 @@ class Alakol(MDScreen):
     pass
 class Huron(MDScreen):
     pass
-        
+class Irtysh(MDScreen):
+    pass
 class MainScreen(MDScreen):
     def open_menu(self):
         self.ids.button1.text = 'Choose location:                  '
@@ -78,13 +79,14 @@ class MyApp(MDApp):
         kv = Builder.load_file('main_screen.kv')
         global sm 
         sm = MDScreenManager()
-        # sm.add_widget(MainScreen(name='main_screen'))
-        # sm.add_widget(splashScreen(name='splashScreen'))
-        # sm.add_widget(KZ(name='kz'))
-        # sm.add_widget(EN(name='en'))
+        sm.add_widget(MainScreen(name='main_screen'))
+        sm.add_widget(splashScreen(name='splashScreen'))
+        sm.add_widget(KZ(name='kz'))
+        sm.add_widget(EN(name='en'))
         sm.add_widget(Markakol(name='markakol'))
-        # sm.add_widget(Alakol(name='alakol'))
-        #sm.add_widget(Huron(name='huron'))
+        sm.add_widget(Alakol(name='alakol'))
+        sm.add_widget(Huron(name='huron'))
+        sm.add_widget(Irtysh(name='irtysh'))
         self.menu_items = ['Item1', 'Item2', 'Item3']
         return sm
 

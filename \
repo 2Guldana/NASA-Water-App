@@ -7,7 +7,7 @@ from kivymd.uix.list import MDList, OneLineListItem
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.button import MDRectangleFlatButton 
-from kivy.clock import Clock
+
 Window.size = (360, 640)
 class button_for_menu(MDRectangleFlatButton):
     font_name = '/usr/share/fonts/TTF/Dongle-Regular.ttf'
@@ -17,13 +17,15 @@ class button_for_menu(MDRectangleFlatButton):
 class MyScreens(MDScreenManager):
     pass
 class splashScreen(MDScreen):
-    pass 
-class Markakol(MDScreen):
-    pass 
-class Alakol(MDScreen):
-    pass
-class Huron(MDScreen):
-    pass
+    def start(self):
+        Clock.schedule_once(self.change_screen, 2)
+    def change_screen(self, dt):
+        if self.app.country == 'kz':
+            sm.current = 'kz'
+        elif self.app.country == 'en':
+            sm.current = 'en'
+        else: 
+            sm.current ='fr'
         
 class MainScreen(MDScreen):
     def open_menu(self):
@@ -31,16 +33,19 @@ class MainScreen(MDScreen):
         menu_items=[
             {'viewclass': 'button_for_menu', 
              "text": 'Kazakhstan',
-             'on_release':lambda: self.loading(1),
+             'on_release': lambda: self.loading(), 
              'id':'first'
              },
             {'viewclass': 'button_for_menu', 
              "text": 'U.S.A.',
-             'on_release': lambda: self.loading(2),
+             'on_release': lambda: self.loading(),
              },
-
+            {'viewclass': 'button_for_menu', 
+             "text": 'France',
+             'on_release': lambda: self.loading(),
+             },
         ]
-        self.menu = MDDropdownMenu(
+        menu = MDDropdownMenu(
             caller=self.ids.button1,
             items=menu_items,
             width_mult=4,
@@ -51,40 +56,20 @@ class MainScreen(MDScreen):
             position='center',
         )
 
-        self.menu.open()
-    def loading(self, num):
-        self.menu.dismiss()
+        menu.open()
+
+    def loading(self):
         sm.current = 'splashScreen'
-        if num == 1: 
-            Clock.schedule_once(self.change_kz, 1)
-        elif num == 2: 
-            Clock.schedule_once(self.change_en, 2)
-        elif num == 3: 
-            Clock.schedule_once(self.change_fr, 2)
-    def change_kz(self, dt):
-        sm.current = 'kz'
-    def change_en(self, dt):
-        sm.current = 'en'
-    def change_fr(self, dt):
-        sm.current = 'fr'  
-class KZ(MDScreen):
-    pass
-class EN(MDScreen):
-    pass
+
+
 
 class MyApp(MDApp):
-    country = ''
     def build(self):
         kv = Builder.load_file('main_screen.kv')
         global sm 
         sm = MDScreenManager()
-        # sm.add_widget(MainScreen(name='main_screen'))
-        # sm.add_widget(splashScreen(name='splashScreen'))
-        # sm.add_widget(KZ(name='kz'))
-        # sm.add_widget(EN(name='en'))
-        sm.add_widget(Markakol(name='markakol'))
-        # sm.add_widget(Alakol(name='alakol'))
-        #sm.add_widget(Huron(name='huron'))
+        sm.add_widget(MainScreen(name='main_screen'))
+        sm.add_widget(splashScreen(name='splashScreen')) 
         self.menu_items = ['Item1', 'Item2', 'Item3']
         return sm
 

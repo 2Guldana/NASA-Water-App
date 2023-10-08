@@ -91,6 +91,4 @@ class MyApp(MDApp):
         return sm
 
 
-
-
 MyApp().run()
